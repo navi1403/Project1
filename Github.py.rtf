@@ -1,0 +1,243 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1344\cocoasubrtf720
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl400
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\sl400
+
+\f1\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 def using_hash(x,y):				#Calculates count using a dictionary/hash table
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0count = 0					#initialize variable
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0my_dict = \{\}					#initialize dictionary
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0for i in range(x, y+1):			#loop through all the elements in the given range
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0key = get_new_number(i)		#Call function to get a new number
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0val = my_dict.get(key)			#Get value for key
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0if val == None:				#If key does not exist
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 							
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0my_dict[key] = 1			#Insert key with value 1 \'a0\'a0\'a0\'a0\'a0\'a0
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 else:			
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0my_dict[key] = val+1			#increase value by 1
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 						
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0for i in my_dict.values():			#loop through dict values 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0count += int(i*(i-1)/2)			#Calculate number of pairs 
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl400
+
+\f1\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0return count				#return the count
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl400
+
+\f1\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 def get_new_number(num):			#Function to get digits from a number
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0my_list=[]					#initialize the list
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0while num>0:				#check if number is greater than 0
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0my_list.append(str(num%10))	#get the last digit of a number and insert it into a list
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0num=int(num/10)		#divide number by 10
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0my_list.sort()			#sort the list
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0return ''.join(my_list)		#join the list to return a sorted number
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 def are_equal(num1, num2):		#Function checks if numbers are equal		
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 	x = get_new_number(num1) #calls the get_new_number function
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 	y = get_new_number(num2)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 	if x==y:			# checks if x is equal to y
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 		return True
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 	else:
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 		return False
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl400
+
+\f1\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 def using_loops(x,y):				#Find count using loops	
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0count = 0					#initialize count to 0
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0for i in range(x, y+1):			#loop through the given range
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\fi960\sl400
+
+\f1\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0for j in range(i+1, y+1):	#loop through the range to compare each number with the number which i is pointing to
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720\sl400
+
+\f1\fs30 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0if (are_equal(i,j)):			#call function to check if i is equal to j
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0#print "(%d,%d)" %(i,j)		
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0count=count+1
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0  \'a0\'a0\'a0return count
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 A=10
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 B=300
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 print using_loops(A,B)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 print "now test hash"
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+
+\f1\fs30 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 print using_hash(A,B)
+\f0\fs24 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+\pard\pardeftab720
+\cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \
+}
